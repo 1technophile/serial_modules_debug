@@ -1,6 +1,20 @@
 //  SerialIn_SerialOut_HM-1X
+//  Uses hardware serial to talk to the host computer and AltSoftSerial for communication with the bluetooth module
+//
+//  What ever is entered in the serial monitor is sent to the connected device
+//  Anything received from the connected device is copied to the serial monitor
+//  Does not send line endings to the HM-10
+//
+//  Pins
+//  BT VCC to Arduino 5V out. 
+//  BT GND to GND
+//  Arduino D8 (SS RX) - BT TX no need voltage divider 
+//  Arduino D9 (SS TX) - BT RX through a voltage divider (5v to 3.3v)
+//
 //  Initial sketch from http://www.martyncurrey.com/hm-10-bluetooth-4ble-modules/
 //
+
+// with an ESP8266
 #define BT_RX 13 //D7 ESP8266 RX connect HM-10 or 11 TX
 #define BT_TX 12 //D6 ESP8266 TX connect HM-10 or 11 RX
 
